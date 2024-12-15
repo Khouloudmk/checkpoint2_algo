@@ -1,0 +1,20 @@
+const tab = [20, 18, 21, 9, 10];
+
+function insertionSort(tab) {
+    for (let i = 1; i < tab.length; i++) {
+        let current = tab[i];
+        let j = i - 1;
+
+        while (j >= 0 && tab[j] > current) {
+            tab[j + 1] = tab[j];
+            j--;
+        }
+
+        tab[j + 1] = current;
+    }
+    return tab;
+}
+
+const sortedTab = insertionSort(tab);
+console.log(sortedTab);
+
